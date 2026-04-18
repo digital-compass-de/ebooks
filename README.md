@@ -77,9 +77,11 @@ chmod 600 ~/.env
 # PM2 Prozess stoppen
 pm2 stop n8n
 
-# Mit Umgebungsvariablen neu starten
-pm2 start n8n --name "n8n" --env-file /home/claw/.env
+# Mit Umgebungsvariablen dauerhaft in .bashrc
+set -a; source /home/claw/.env; set +a
 
+# PM2 neu starten
+pm2 start n8n --name "n8n"
 ```
 
 ## Variablen in n8n nutzen
