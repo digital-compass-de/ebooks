@@ -13,11 +13,15 @@
 ## Setup für VPS
 - n8n Installation
 ### Pandoc + LaTeX installieren
+```
 sudo apt update && sudo apt install -y \
   texlive-xetex texlive-fonts-recommended pandoc
+```
 
 ### Verzeichnis erstellen auf VPS
+```
 mkdir -p /tmp /output
+```
 
 ### Github Setup
 1. Repo erstellen (z.B. "ebooks")
