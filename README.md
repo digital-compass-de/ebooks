@@ -80,8 +80,8 @@ pm2 stop n8n
 # Mit Umgebungsvariablen dauerhaft in .bashrc
 set -a; source /home/claw/.env; set +a
 
-# PM2 neu starten
-pm2 start n8n --name "n8n"
+# PM2 neu starten (NODES_EXCLUDE ist für den 1. Node executeCommand)
+NODES_EXCLUDE='[]' pm2 start n8n --name n8n
 ```
 
 ## Variablen in n8n nutzen
