@@ -92,5 +92,7 @@ mkdir -p /tmp /output
 | **Kreative Zusammenhänge** | ⭐⭐⭐ Höchste Stufe  | ⭐⭐ Gut    | ⭐⭐ Gut    |
 | **Mathe/Logik**            | ⭐⭐⭐ Stark          | ⭐⭐ Mittel | ⭐⭐ Gut    |
 
+## Fazit
+Opus ist für diese Aufgabe überqualifiziert und viel teuer.
 
 
