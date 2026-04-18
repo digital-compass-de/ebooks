@@ -60,3 +60,37 @@ mkdir -p /tmp /output
 "model": "openai/gpt-4" 
 // oder
 "model": "anthropic/claude-3.5-sonnet"
+```
+
+## Kostenschätzung
+### Videolänge zwischen ca. 30 und 60 min.
+| Video-Länge | Transkript (geschätzt) | Tokens         |
+| ----------- | ---------------------- | -------------- |
+| 30 Min      | ~4.500 Wörter          | ~6.000 Tokens  |
+| 60 Min      | ~9.000 Wörter          | ~12.000 Tokens |
+
+### Kontextfenster Vergleich
+| Modell            | Kontext | Passt für 60 Min?   |
+| ----------------- | ------- | ------------------- |
+| GPT-3.5           | 16K     | ❌ Nein (zu knapp)   |
+| GPT-4             | 128K    | ✅ Ja                |
+| GPT-4 Turbo       | 128K    | ✅ Ja                |
+| Claude 3.5 Sonnet | 200K    | ✅ Ja (mehr Reserve) |
+
+## Kostenschätzung 60 min. Vides
+| Modell            | Input Tokens | Kosten   |
+| ----------------- | ------------ | -------- |
+| GPT-4             | ~12.000      | ~\$0.36  |
+| Claude 3.5 Sonnet | ~12.000      | ~\$0.018 |
+
+## Opus vs Sonnet vs GPT-4
+| Anforderung                | Opus               | Sonnet    | GPT-4     |
+| -------------------------- | ------------------ | --------- | --------- |
+| **Text verstehen**         | ✅ Überqualifiziert | ✅ Perfekt | ✅ Perfekt |
+| **Kapitel strukturieren**  | ✅ Ja, aber teuer   | ✅ Ideal   | ✅ Ideal   |
+| **Übersetzen**             | ✅ Ja, aber teuer   | ✅ Ideal   | ✅ Ideal   |
+| **Kreative Zusammenhänge** | ⭐⭐⭐ Höchste Stufe  | ⭐⭐ Gut    | ⭐⭐ Gut    |
+| **Mathe/Logik**            | ⭐⭐⭐ Stark          | ⭐⭐ Mittel | ⭐⭐ Gut    |
+
+
+
