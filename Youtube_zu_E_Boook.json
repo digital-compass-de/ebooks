@@ -48,7 +48,7 @@
       "name": "GitHub_Markdown_Push",
       "parameters": {
         "method": "PUT",
-        "url": "https://api.github.com/repos/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/contents/ebooks/{{$node.youtube_id}}.md",
+        "url": "https://api.github.com/repos/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/contents/n8n-ebooks/{{$node.youtube_id}}.md",
         "headers": {
           "Authorization": "token {{$env.GITHUB_TOKEN}}",
           "Content-Type": "application/json"
@@ -65,14 +65,14 @@
       "parameters": {
         "botToken": "={{ $env.TELEGRAM_BOT_TOKEN }}",
         "chatId": "={{ $env.TELEGRAM_CHAT_ID }}",
-        "text": "📚 *E-Book zur Review: {{$node.json.ebook_titel}}*\n\n🔗 GitHub: https://github.com/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/blob/main/ebooks/{{$node.youtube_id}}.md\n\n[✅ Freigeben für Cover + PDF]({{$node.webhook_url}}?action=approve)",
+        "text": "📚 *E-Book zur Review: {{$node.json.ebook_titel}}*\n\n🔗 GitHub: https://github.com/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/blob/main/n8n-ebooks/{{$node.youtube_id}}.md\n\n[✅ Freigeben für Cover + PDF]({{$node.webhook_url}}?action=approve)",
         "options": {
           "reply_markup": {
             "inline_keyboard": [
               [
                 {
                   "text": "📝 Bearbeiten (GitHub)",
-                  "url": "https://github.com/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/edit/main/ebooks/{{$node.youtube_id}}.md"
+                  "url": "https://github.com/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/edit/main/n8n-ebooks/{{$node.youtube_id}}.md"
                 }
               ],
               [
@@ -123,7 +123,7 @@
       "name": "GitHub_Cover_Push",
       "parameters": {
         "method": "PUT",
-        "url": "https://api.github.com/repos/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/contents/ebooks/{{$node.youtube_id}}.png",
+        "url": "https://api.github.com/repos/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/contents/n8n-ebooks/{{$node.youtube_id}}.png",
         "headers": {
           "Authorization": "token {{$env.GITHUB_TOKEN}}",
           "Content-Type": "application/json"
@@ -148,7 +148,7 @@
       "parameters": {
         "botToken": "={{ $env.TELEGRAM_BOT_TOKEN }}",
         "chatId": "={{ $env.TELEGRAM_CHAT_ID }}",
-        "text": "✅ E-Book fertig: {{$node.json.ebook_titel}}\n\n🎨 Cover: https://github.com/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/blob/main/ebooks/{{$node.youtube_id}}.png\n\n📄 PDF: /output/{{$node.youtube_id}}.pdf"
+        "text": "✅ E-Book fertig: {{$node.json.ebook_titel}}\n\n🎨 Cover: https://github.com/{{$env.GITHUB_USER}}/{{$env.GITHUB_REPO}}/blob/main/n8n-ebooks/{{$node.youtube_id}}.png\n\n📄 PDF: /output/{{$node.youtube_id}}.pdf"
       }
     }
   ],
