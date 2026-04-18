@@ -41,6 +41,49 @@ mkdir -p /tmp /output
 | `GITHUB_USER`        | Dein GitHub Username  |
 | `GITHUB_REPO`        | Repository-Name       |
 
+## Installationsvorraussetzungen hier
+- n8n wurde als user installiert nicht als root oder mit sudo
+  ```
+  npm install -g n8n
+  ```
+- und läuft im Hintergrund durch PM2
+  ```
+  pm2 start n8n --name "n8n"
+  ```
+
+### Environment Datei .env im user home
+```
+# .env im Home-Verzeichnis erstellen
+nano ~/.env
+
+# Inhalt:
+OPENROUTER_API_KEY=sk-or-v1-...
+TELEGRAM_BOT_TOKEN=...
+TELEGRAM_CHAT_ID=...
+GITHUB_TOKEN=...
+GITHUB_USER=deinuser
+GITHUB_REPO=ebooks
+
+# Rechte setzen
+chmod 600 ~/.env
+```
+
+#### Neue PM2 Konfiguration damit die .env läd
+```
+# PM2 Prozess stoppen
+pm2 stop n8n
+
+# Mit Umgebungsvariablen neu starten
+pm2 start n8n --name "n8n" --env-file /home/claw/.env
+
+```
+
+## Variablen in n8n nutzen
+```
+In n8n Nodes: ={{ $env.VARIABLE_NAME }}
+```
+
+
 ## Mögliche Anpassungen
 | Schritt                | Modell            | Grund                        |
 | ---------------------- | ----------------- | ---------------------------- |
