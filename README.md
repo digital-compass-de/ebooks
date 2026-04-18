@@ -25,7 +25,7 @@ mkdir -p /tmp /output
 
 ### Github Setup
 1. Repo erstellen (z.B. "ebooks")
-2. Ordner "ebooks/" anlegen
+2. Ordner "n8n-ebooks/" anlegen
 3. Personal Access Token erstellen (Settings → Developer settings → Tokens)
     Berechtigungen: repo (Lese- und Schreibrechte)
 
