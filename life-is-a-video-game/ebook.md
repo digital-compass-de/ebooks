@@ -1,13 +1,4 @@
-Perfekt — genau so macht man das richtig 👍
-Dann bauen wir jetzt **echten Inhalt**, nicht nur Struktur.
-
-Ich schreibe dir Kapitel 1–3 so, dass sie sich **lesen wie ein Buch**, nicht wie eine Zusammenfassung.
-
----
-
 # 📘 Life is a Video Game
-
-## Kapitel 1–3 (Creator-Level Version)
 
 ---
 
