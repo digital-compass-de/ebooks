@@ -1,7 +1,3 @@
-Hier ist dein strukturierter Text zum YouTube-Transcript **„Life is a Video Game“**, klar gegliedert in Kapitel und verständlich aufbereitet:
-
----
-
 # 🎮 Life is a Video Game – Strukturierter Überblick
 
 ## 1. Die Grundidee: Das Leben als Videospiel
